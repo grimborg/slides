@@ -1,5 +1,5 @@
 build:
-	rst2slides hgworkflow.rst > hgworkflow.html
+	rst2slides hgworkflow.rst > index.html
 
 open:
-	open hgworkflow.html
+	open index.html
