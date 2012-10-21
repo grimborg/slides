@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clojure</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script src="https://github.com/downloads/gnab/remark/remark-0.4.2.min.js" type="text/javascript"></script>
+    <!-- <script src="remark-0.4.2.min.js" type="text/javascript"></script> -->
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="github.css" type="text/css" media="screen" />
+    <script>
+      remark.config({highlightLanguage: 'clojure', highlightStyle: 'github',
+          highlightInline: true});
+    </script>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center
+
+![face](poker-face.jpg)
+
+---
+
+class: center
+
+# Clojure
+
+---
+
+# Функциональный
+
+- map, reduce, filter, partial...
+- mapcat, reductions...
+- juxt, complement, partition-by, group-by...
+- ...
+
+---
+
+class: center
+
+# Простой (vs сложный)
+
+(не факт, что лëгкий :)
+
+---
+
+# Либеральный
+
+- Лисп с разными скобочками
+- Макросы
+- +коммьюнити относительно консервативное
+
+---
+
+class: center
+
+# Steve Yegge
+# ОШИБСЯ
+
+---
+
+# Крутой
+
+- Быстрые неизменяемые структуры данных
+- Конкурентное программирование
+- Многоплатформенный (JVM, .Net, Python, JS, ...)
+
+---
+
+# Подслащенный лисп
+
+- Синтаксис для структур данных:
+  - `(list)`, `[vector]`, `{:hash map}`, `#{set}`
+- Короткий синтаксис для лямбд
+  - `(map #(mod % 2) (range 5))`
+- Деструктуризация (более продвинутые \*args, \**kwargs)
+
+---
+
+# Инфраструктура
+
+- Namespaces
+```
+  (ns ^{:doc "Google Maps interface"}
+    locations.google
+    (:use-macros [locations.macros :only [doasync]])
+    (:use [locations.utils :only [log]]
+          [locations.map :only [Map locate]])
+    (:require [clojure.browser.dom :as dom]
+              [goog.net.Jsonp :as Jsonp]))
+```
+
+- Leiningen
+
+---
+
+# Немає часу, панове
+## Капець
+
+---
+
+# Datomic
+
+---
+
+# Истчо
+
+- clojure-doc.org - туториалы
+- clojuredocs.org - референс
+- 4clojure.org - упражнения
+
+# Гудлак!
+
+
+    </textarea>
+    <div id="slideshow"></div>
+  </body>
+</html>
